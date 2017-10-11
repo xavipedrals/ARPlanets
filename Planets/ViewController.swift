@@ -46,6 +46,17 @@ class ViewController: UIViewController {
         if planet != .sun {
             parentNode.addChildNode(planetOrbit)
         }
+        if planet == .saturn {
+            planetNode.addChildNode(getSaturnRing())
+        }
+    }
+    
+    func getSaturnRing() -> SCNNode {
+        let ringNode = SCNNode()
+        ringNode.geometry = SCNTube(innerRadius: 0.14, outerRadius: 0.26, height: 0.005)
+        ringNode.geometry?.firstMaterial?.diffuse.contents = UIColor(r: 230, g: 194, b: 160, a: 1.0)
+        ringNode.position = SCNVector3(0, 0, 0)
+        return ringNode
     }
 }
 
