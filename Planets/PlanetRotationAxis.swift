@@ -10,7 +10,7 @@ import ARKit
 
 class PlanetRotationAxis: SCNNode {
     
-    let centerOfUniverse = SCNVector3(0, -0.8, -2.7)
+    let centerOfUniverse = SCNVector3(0, -0.7, -2.5)
     
     init(planet: PlanetEnum) {
         super.init()

@@ -57,11 +57,11 @@ enum PlanetEnum {
         case .jupiter:
             return -1.4
         case .saturn:
-            return 1.68
+            return 1.75
         case .uranus:
-            return -1.95
+            return -2.1
         case .neptune:
-            return 2.14
+            return 2.3
         }
     }
 }

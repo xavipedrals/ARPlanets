@@ -40,8 +40,12 @@ class ViewController: UIViewController {
     func setup(planet: PlanetEnum) {
         let planetNode = PlanetNode(planet: planet)
         let parentNode = PlanetRotationAxis(planet: planet)
+        let planetOrbit = PlanetOrbit(planet: planet)
         self.sceneView.scene.rootNode.addChildNode(parentNode)
         parentNode.addChildNode(planetNode)
+        if planet != .sun {
+            parentNode.addChildNode(planetOrbit)
+        }
     }
 }
 
